@@ -1,334 +1,408 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-	<title>StormkiNET ✗ Home</title>
+    <title>StormkiNET ✗ Home</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="description" content="Stormki Network website.">
+
+    <link rel="icon" href="img/Stormki_Logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
 
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="icon" href="img/Stormki_Logo.ico">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
-	<!-- Font -->
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
-
-	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-grid.min.css">
-	<link rel="stylesheet" type="text/css" href="js/bootstrap/bootstrap.min.js">
-
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-
+    <style>
+        html {
+            overflow-y: scroll;
+            /* Add the ability to scroll */
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        
+        html::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        
+        html {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+        
+        #top {
+            position: fixed;
+            bottom: 40px;
+            background-color: #f04444;
+            padding: 20px;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            font-weight: bold;
+            left: 95%;
+            cursor: pointer;
+            display: none;
+            transition: .2s;
+        }
+        
+        #top:hover {
+            background-color: #e02424;
+        }
+        
+        #top:active {
+            background-color: #f04444;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .text {
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <!-- Start Header -->
+    <header class="text-gray-400 bg-gray-900 body-font" id="header">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <img src="img/Stormki_Logo.ico" alt="Stormki" width="40">
+                <span class="ml-3 text-xl">StormkiNET</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-white" href="#features">Features</a>
+                <a class="mr-5 hover:text-white" href="#gamemodis">Gamemodis</a>
+                <a class="mr-5 hover:text-white" href="#serverteam">Serverteam</a>
+                <a class="mr-5 hover:text-white" href="#contact">Kontakt</a>
+            </nav>
+            <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0" onclick="parent.open('https://discord.gg/kZPEkFtxPQ')">Discord
+			<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+			  <path d="M5 12h14M12 5l7 7-7 7"></path>
+			</svg>
+		  </button>
+        </div>
+    </header>
+    <!-- End Header -->
 
-	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button> 
-	
-	<!-- Navbar -->
-	<div class="topnav" id="myTopnav">
-		<div class="max-width">
-			  <a href="#head">Home</a>
-			  <a href="#about">About</a>
-			  <a href="#gamemodes">Gamemodes</a>
-			  <a href="#vote">Vote</a>
-			  <a href="#staff">Staff</a>
-		  	  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-		</div>
-	</div>
-	<!-- End Navbar -->
+    <!-- Start features -->
+    <section class="text-gray-400 bg-gray-900 body-font" id="features">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">Was bietet dir StormkiNET?</h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Wir bieten dir einiges. Untenstehend sind einige unserer wichtigsten Features aufgelistet.</p>
+            </div>
+            <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-gray-800 rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+				  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+				  <path d="M22 4L12 14.01l-3-3"></path>
+				</svg>
+                        <span class="title-font font-medium text-white">Bestmögliche Performance</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-gray-800 rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+				  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+				  <path d="M22 4L12 14.01l-3-3"></path>
+				</svg>
+                        <span class="title-font font-medium text-white">Grossartige Community</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-gray-800 rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+				  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+				  <path d="M22 4L12 14.01l-3-3"></path>
+				</svg>
+                        <span class="title-font font-medium text-white">Uptime</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-gray-800 rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+				  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+				  <path d="M22 4L12 14.01l-3-3"></path>
+				</svg>
+                        <span class="title-font font-medium text-white">Events</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-gray-800 rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+				  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+				  <path d="M22 4L12 14.01l-3-3"></path>
+				</svg>
+                        <span class="title-font font-medium text-white">Eigene Plugins</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-gray-800 rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+				  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+				  <path d="M22 4L12 14.01l-3-3"></path>
+				</svg>
+                        <span class="title-font font-medium text-white">Eigene Spielmodis</span>
+                    </div>
+                </div>
+            </div>
+            <button class="flex mx-auto mt-16 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg" onclick="parent.open('https://discord.gg/kZPEkFtxPQ')">Discord</button>
+        </div>
+    </section>
+    <!-- End features -->
 
-	<!-- Header (Banner) -->
-	<header id="head" class="parallax">
-		<h1>Dein Minecraft Server Netzwerk</h1>
-		<h3>play.stormki.net</h3>
-	</header>
-	<!-- End Header -->
 
-	<!-- About Section -->
-	<section id="about">
-		<h1>StormkiNET</h1>
-		<p>Ein Paar unserer Features.</p>
-		<hr>
-		<!-- First row of features -->
-		<div class="row features">
-			<div class="col">
-				<i class="fab fa-cloudscale feature"></i>
-				<h2>Performance</h2>
-				<p>Sämtliche Plugins wurden möglichst Performant geschrieben und wir benutzen Beste Server hardware.</p>
-			</div>
-			<div class="col">
-				<i class="fas fa-users feature"></i>
-				<h2>Grossartige Community</h2>
-				<p>Wir haben eine sehr lässige Community also macht es sehr viel Spass!</p>
-			</div>
-			<div class="col">
-				<i class="fas fa-shield-alt feature"></i>
-				<h2>Uptime</h2>
-				<p>Unser Server hat eine Uptime von 99,9%, so dass du spielen kannst, wann immer du willst!</p>
-			</div>
-		</div>
-		<!-- End first row -->
+    <!-- Start Gamemodis -->
+    <section class="text-gray-400 bg-gray-900 body-font" id="gamemodis">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">Welche Spielmodis bietet dir StormkiNET?</h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Wir bieten dir einige sowohl klassiche, als auch eigene Spielmodis. Untenstehend findest du schonmal ein Paar :)</p>
+            </div>
+            <div class="flex flex-wrap -m-4">
+                <div class="p-4 md:w-1/3">
+                    <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="img/bedwars.jpg" alt="BedWars">
+                        <div class="p-6">
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Classic</h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">BedWars</h1>
+                            <p class="leading-relaxed mb-3">Bedwars ist ein Spielmodus worum es geht vom Gegner das Bett abzubauen und ihn danach zu töten.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3">
+                    <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="img/survival.jpg" alt="Pickaxe">
+                        <div class="p-6">
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Classic</h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">Survival</h1>
+                            <p class="leading-relaxed mb-3">Ein ganz normalen vanilla Server wo du Survival spielen kannst ohne Plugins ohne nix. Keine Resets, einfach Vanilla MC spielen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3">
+                    <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="img/creative.jpg" alt="Survival">
+                        <div class="p-6">
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Classic</h2>
+                            <h1 class="title-font text-lg font-medium text-white mb-3">Creative</h1>
+                            <p class="leading-relaxed mb-3">Creative ist ein Spielmodus, welcher es den Spielern ermöglicht, ein Grundstück zu geben. Auf diesem Grundstück können die Spieler im Creative-Modus bauen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- End Gamemodis -->
 
-		<!-- Second row of features -->
-		<div class="row features">
-			<div class="col">
-				<i class="far fa-calendar-alt feature"></i>
-				<h2>Events</h2>
-				<p>Wir haben auf unserem Server immer wieder grossartige Events wo du viel Spass haben kannst!</p>
-			</div>
-			<div class="col">
-				<i class="fas fa-code-branch feature"></i>
-				<h2>Eigene Plugins</h2>
-				<p>Wir haben sehr viel Zeit in die Entwicklung unserer eigenen Systemen gesteckt!</p>
-			</div>
-			<div class="col">
-				<i class="fas fa-fighter-jet feature"></i>
-				<h2>Eigene Spielmodis</h2>
-				<p>Wir haben uns auch ein Paar eigene Gamemodis einfallen lassen welche es exklusiv nur auf Stormki gibt.</p>
-			</div>
-		</div>
-		<!-- End second row -->
 
-		<!-- Note: You can add as many feature rows as you like. -->
-	</section>
-	<!-- End about section -->
+    <!-- Begin Serverteam -->
+    <section class="text-gray-400 bg-gray-900 body-font" id="serverteam">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="text-2xl font-medium title-font mb-4 text-white tracking-widest">Unser Team</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Jeder Teil von unserem Serverteam wird hier aufgelistet</p>
+            </div>
+            <div class="flex flex-wrap -m-4">
+                <div class="p-4 lg:w-1/2">
+                    <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://cravatar.eu/helmhead/RainyDev/200.png">
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-white">RainyDev</h2>
+                            <h3 class="text-gray-500 mb-3">Inhaber & Development</h3>
+                            <span class="inline-flex">
+					<button class="ml-2 text-gray-500" onclick="parent.open('https://twitter.com/RainyDevv')">
+					  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+						<path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+					  </svg>
+					</button>
+				  </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/2">
+                    <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://cravatar.eu/helmhead/LoginAsRoot/200.png">
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-white">LoginAsRoot</h2>
+                            <h3 class="text-gray-500 mb-3">Senior Developer</h3>
+                            <span class="inline-flex">
+				  </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/2">
+                    <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://cravatar.eu/helmhead/Brumara/200.png">
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-white">Brumara</h2>
+                            <h3 class="text-gray-500 mb-3">Senior Developer</h3>
+                            <span class="inline-flex">
+				  </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/2">
+                    <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://cravatar.eu/helmhead/Dustiiiinnnn/200.png">
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-white">Dustin</h2>
+                            <h3 class="text-gray-500 mb-3">Content</h3>
+                            <span class="inline-flex">
+				  </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/2">
+                    <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://cravatar.eu/helmhead/Leutix/200.png">
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-white">Leutix</h2>
+                            <h3 class="text-gray-500 mb-3">Ticket & Ingame Support</h3>
+                            <span class="inline-flex">
+				  </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/2">
+                    <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://cravatar.eu/helmhead/DerMetelGamerYT/200.png">
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-white">DerMetelGamerYT</h2>
+                            <h3 class="text-gray-500 mb-3">Supporter</h3>
+                            <span class="inline-flex">
+				  </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/2">
+                    <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://cravatar.eu/helmhead/MHF_QUESTION/200.png">
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-white">GESUCHT</h2>
+                            <h3 class="text-gray-500 mb-3">?</h3>
+                            <span class="inline-flex">
+				  </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Serverteam -->
 
-	<!-- Banner 1 -->
-	<section id="banner" class="parallax">
-		<h1>AUF WAS WARTEST DU?</h1>
-		<h2>JOIN AUF UNSEREN SERVER ÜBER <i>PLAY.STORMKI.NET</i></h2>
-	</section>
-	<!-- End Banner 1 -->
+    <!-- Start Contact -->
+    <section class="text-gray-400 bg-gray-900 body-font relative" id="contact">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-12">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Kontaktiere uns</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Du kannst auf unserem Discord ein Ticket erstellen oder uns eine Email schreiben :)</p>
+            </div>
+            <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                <div class="flex flex-wrap -m-2">
+                    <div class="p-2 w-full">
+                        <button class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg" onclick="parent.open('https://discord.gg/kZPEkFtxPQ')">Discord joinen</button>
+                    </div>
+                    <div class="p-2 w-full text-center">
+                        <button class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg" onclick="parent.open('mailto:contact@stormki.net')">contact@stormki.net</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact -->
 
-	<!-- Gamemodes Section -->
-	<section id="gamemodes">
-		<h1>GAMEMODES</h1>
-		<p>Was bieten wir dir?</p>
-		<hr>
-		<!-- First Gamemode -->
-		<div class="row fixed-width">
-			<div class="col-md mode">
-				<h2>SURVIVAL</h2>
-				<p>Ein ganz normalen vanilla Server wo du Survival spielen kannst ohne Plugins ohne nix. Keine Resets, einfach Vanilla MC spielen.</p>
-			</div>
-			<!-- Gamemode Image -->
-			<div class="col-md img">
-				<img class="res-img" src="img/pickaxe.png">
-			</div>
-			<!-- End Gamemode Image -->
-		</div>
-		<!-- End First Gamemode -->
-		<section class="gray">
-			<!-- Second Gamemode -->
-			<div class="row fixed-width">
-				<!-- Image Second Gamemode -->
-					<div class="col-md img">
-						<img class="res-img" src="img/bedwars.jpg">
-					</div>
-				<!-- End Image Second Gamemode -->
-				<div class="col-md mode">
-					<h2>BEDWARS</h2>
-					<p>Bedwars ist ein Spielmodus worum es geht vom Gegner das Bett abzubauen und ihn danach zu töten.
-						Im Spiel kann man sich mit Bronze/Silber oder Gold einige Fantastische Sachen kaufen womit man noch etwas Spielspaß einbringen kann und das ganze gleich etwas Bunter macht. Sind alle Betten abgebaut und alle außer einer Tod gewinnt das Team mit dem überlebenden.</p>
-				</div>
-			</div>
-			<!-- End Second Gamemode -->
-		</section>
-		<!-- Start Third Gamemode -->
-		<div class="row fixed-width">
-			<div class="col-md mode">
-				<h2>CREATIVE</h2>
-				<p>Creative ist ein Spielmodus, welcher es den Spielern ermöglicht, ein Grundstück zu geben. Auf diesem Grundstück können die Spieler im Creative-Modus bauen.</p>
-			</div>
-			<!-- Image Third Gamemode -->
-			<div class="col-md img">
-				<img class="res-img" src="img/creative.jpg">
-			</div>
-			<!-- End Image Third Gamemode -->
-		</div>
-		<!-- End Third Gamemode -->
-	</section>
-	<!-- End Gamemode Section -->
 
-	<!-- Start Second Banner -->
-	<section id="banner2" class="parallax">
-		<h1>DU MÖCHTEST UNS UNTERSTÜTZEN?</h1>
-		<h2>SCHAU MAL IM STORE VORBEI: <i><a href="#">STORE.STORMKI.NET</a></i></h2>
-	</section>
-	<!-- End Second Banner -->
+    <!-- Start Footer -->
+    <footer class="text-gray-400 bg-gray-900 body-font">
+        <button onclick='window.goUp({top: 0, behavior: "smooth"});' id="top">Top</button>
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+                <img src="img/Stormki_Logo.ico" alt="Stormki" width="40">
+                <span class="ml-3 text-xl">StormkiNET</span>
+            </a>
+            <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2021 StormkiNET —
+                <a href="https://twitter.com/StormkiNetwork" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@RainyDevv</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <button class="ml-3 text-gray-400" onclick="parent.open('https://twitter.com/StormkiNetwork')">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+        </svg>
+	</button>
+    </span>
+        </div>
+    </footer>
+    <!-- End Footer -->
 
-	<!-- Vote Section -->
-	<section id="vote">
-		<h1>VOTE FÜR UNSEREN SERVER</h1>
-		<p>Vote für unseren Server für ein Paar Belohnungen</p>
-		<hr>
-		<div class="row votelist">
-			<!-- First Vote Link -->
-			<div class="col-md voteblock">
-				<img class="res-img-sm" src="https://www.planetminecraft.com/images/layout/planetminecraft_logo.png">
-				<h2>PlanetMinecraft</h2>
-				<a href="#">Jetzt voten</a>
-			</div>
-			<!-- End First Vote Link -->
 
-			<!-- Second Vote Link -->
-			<div class="col-md voteblock">
-				<img class="res-img-sm" src="https://yt3.ggpht.com/-St0amFDpbC0/AAAAAAAAAAI/AAAAAAAAAAA/eZlt0WfF-F8/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg">
-				<h2>ServerPact</h2>
-				<a href="#">Jetzt voten</a>
-			</div>
-			<!-- End Second Vote Link -->
-		</div>
+    <!-- Smooth Scrolling Script (from https://goo.gl/uWLqWu) | Do not touch if you don't know what you're doing! -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
 
-		<!-- Note -->
-		<p>Bitte beachte, dass die Belohnung erst bis zu 10min nach dem Voten bei dir ankommen kann. Sollte dies nicht der Fall sein, wende dich an ein Teammitglied.</p>
-	</section>
-	<!-- End Vote Section -->
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
 
-	<!-- Third Banner -->
-	<section id="banner3" class="parallax">
-		<h1>DU HAST EINE FRAGE?</h1>
-		<h2>KONTAKTIERE UNS ÜBER <i><a href="mailto:#">CONTACT@STORMKI.NET</a></i></h2>
-	</section>
-	<!-- End Third Section -->
+                    // Store hash
+                    var hash = this.hash;
 
-	<!-- Staff Section -->
-	<section id="staff">
-		<h1>UNSER TEAM</h1>
-		<p>Das Team welches hinter Stormki steht</p>
-		<hr>
-		<!-- First Row Staff -->
-		<div class="row stafflist">
-			<!-- First Staff Member -->
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://cravatar.eu/helmhead/RainyDev/190.png">
-				<h2>RainyDev</h2>
-				<p>Inhaber & Development</p>
-			</div>
-			<!-- End First Staff Member -->
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
 
-			<!-- Second Staff Member -->
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://cravatar.eu/helmhead/LoginAsRoot/190.png">
-				<h2>LoginAsRoot</h2>
-				<p>Sr. Dev</p>
-			</div>
-			<!-- End Second Staf Member -->
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+    <!-- End Smooth Scrolling Script -->
 
-			<!-- Third Staff Member -->
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://cravatar.eu/helmhead/Brumara/190.png">
-				<h2>Brumara</h2>
-				<p>Developer</p>
-			</div>
-			<!-- End Third Staff Member -->
-		</div>
-		<!-- End First Row Staff -->
+    <script>
+        const button = document.getElementById("top");
 
-		<!-- Second Row Staff Member -->
-		<div class="row stafflist">
-			<!-- Fourth Staff Member -->
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://cravatar.eu/helmhead/DerMetelGamerYT/190.png">
-				<h2>DerMetelGamerYT</h2>
-				<p>Supporter</p>
-			</div>
-			<!-- End Fourth Staff Member -->
+        window.onscroll = function() {
+            showButton()
+        };
 
-			<!-- Fifth Staff Member -->	
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://cravatar.eu/helmhead/Leutix/190.png">
-				<h2>Leutix</h2>
-				<p>Supporter</p>
-			</div>
-			<!-- End Fifth Staff Member -->
+        function showButton() {
+            if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        }
 
-			<!-- Sixth Staff Member -->
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://cravatar.eu/helmhead/MHF_Question/190.png">
-				<h2>Gesucht</h2>
-				<p>?</p>
-			</div>
-			<!-- End Sixth Staf Member -->
-		</div>
-		<!-- End Second Row Staff -->
-	</section>
-	<!-- End Staff Section -->
-
-	<!-- Footer -->
-	<footer>
-		<div class="footer">
-			<div class="copyright-notice">
-				<p>Stormki.NET &copy; | All rights reserved</p>
-				<p>Made with <font color="red">❤</font> by <a target="_blank" href="https://rainydev.me/">RainyDev</a>.</font></p>
-			</div>
-		</div>
-	</footer>
-	<!-- End Footer -->
-
-	<!-- Smooth Scrolling Script (from https://goo.gl/uWLqWu) | Do not touch if you don't know what you're doing! -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-		  // Add smooth scrolling to all links
-		  $("a").on('click', function(event) {
-
-		    // Make sure this.hash has a value before overriding default behavior
-		    if (this.hash !== "") {
-		      // Prevent default anchor click behavior
-		      event.preventDefault();
-
-		      // Store hash
-		      var hash = this.hash;
-
-		      // Using jQuery's animate() method to add smooth page scroll
-		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-		      $('html, body').animate({
-		        scrollTop: $(hash).offset().top
-		      }, 100, function(){
-		   
-		        // Add hash (#) to URL when done scrolling (default click behavior)
-		        window.location.hash = hash;
-		      });
-		    } // End if
-		  });
-		});
-	</script>
-	<!-- End Smooth Scrolling Script -->
-
-	<script>
-		function myFunction() {
-		    var x = document.getElementById("myTopnav");
-		    if (x.className === "topnav") {
-		        x.className += " responsive";
-		    } else {
-		        x.className = "topnav";
-		    }
-		}
-	</script>
-
-	<script>
-	// When the user scrolls down 20px from the top of the document, show the button
-	window.onscroll = function() {scrollFunction()};
-
-	function scrollFunction() {
-	    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-	        document.getElementById("myBtn").style.display = "block";
-	    } else {
-	        document.getElementById("myBtn").style.display = "none";
-	    }
-	}
-
-	// When the user clicks on the button, scroll to the top of the document
-	function topFunction() {
-	    document.body.scrollTop = 0;
-	    document.documentElement.scrollTop = 0;
-	}
-	</script>
-
+        function goUp() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
+
 </html>
