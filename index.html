@@ -23,21 +23,69 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
+    <style>
+        html {
+            overflow-y: scroll;
+            /* Add the ability to scroll */
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        
+        html::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        
+        html {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+        
+        #top {
+            position: fixed;
+            bottom: 40px;
+            background-color: #f04444;
+            padding: 20px;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            font-weight: bold;
+            left: 95%;
+            cursor: pointer;
+            display: none;
+            transition: .2s;
+        }
+        
+        #top:hover {
+            background-color: #e02424;
+        }
+        
+        #top:active {
+            background-color: #f04444;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .text {
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <!-- Start Header -->
-    <header class="text-gray-400 bg-gray-900 body-font">
+    <header class="text-gray-400 bg-gray-900 body-font" id="header">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
                 <img src="img/Stormki_Logo.ico" alt="Stormki" width="40">
                 <span class="ml-3 text-xl">StormkiNET</span>
             </a>
             <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
-                <a class="mr-5 hover:text-white">Features</a>
-                <a class="mr-5 hover:text-white">Gamemodis</a>
-                <a class="mr-5 hover:text-white">Serverteam</a>
-                <a class="mr-5 hover:text-white">Kontakt</a>
+                <a class="mr-5 hover:text-white" href="#features">Features</a>
+                <a class="mr-5 hover:text-white" href="#gamemodis">Gamemodis</a>
+                <a class="mr-5 hover:text-white" href="#serverteam">Serverteam</a>
+                <a class="mr-5 hover:text-white" href="#contact">Kontakt</a>
             </nav>
             <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0" onclick="parent.open('https://discord.gg/kZPEkFtxPQ')">Discord
 			<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
@@ -49,7 +97,7 @@
     <!-- End Header -->
 
     <!-- Start features -->
-    <section class="text-gray-400 bg-gray-900 body-font">
+    <section class="text-gray-400 bg-gray-900 body-font" id="features">
         <div class="container px-5 py-24 mx-auto">
             <div class="text-center mb-20">
                 <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">Was bietet dir StormkiNET?</h1>
@@ -118,7 +166,7 @@
 
 
     <!-- Start Gamemodis -->
-    <section class="text-gray-400 bg-gray-900 body-font">
+    <section class="text-gray-400 bg-gray-900 body-font" id="gamemodis">
         <div class="container px-5 py-24 mx-auto">
             <div class="text-center mb-20">
                 <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">Welche Spielmodis bietet dir StormkiNET?</h1>
@@ -164,7 +212,7 @@
 
 
     <!-- Begin Serverteam -->
-    <section class="text-gray-400 bg-gray-900 body-font">
+    <section class="text-gray-400 bg-gray-900 body-font" id="serverteam">
         <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-col text-center w-full mb-20">
                 <h1 class="text-2xl font-medium title-font mb-4 text-white tracking-widest">Unser Team</h1>
@@ -211,7 +259,7 @@
                 </div>
                 <div class="p-4 lg:w-1/2">
                     <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                        <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://cravatar.eu/helmhead/zirenox/200.png">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://cravatar.eu/helmhead/Dustiiiinnnn/200.png">
                         <div class="flex-grow sm:pl-8">
                             <h2 class="title-font font-medium text-lg text-white">Dustin</h2>
                             <h3 class="text-gray-500 mb-3">Content</h3>
@@ -258,9 +306,31 @@
     </section>
     <!-- End Serverteam -->
 
+    <!-- Start Contact -->
+    <section class="text-gray-400 bg-gray-900 body-font relative" id="contact">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-12">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Kontaktiere uns</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Du kannst auf unserem Discord ein Ticket erstellen oder uns eine Email schreiben :)</p>
+            </div>
+            <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                <div class="flex flex-wrap -m-2">
+                    <div class="p-2 w-full">
+                        <button class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg" onclick="parent.open('https://discord.gg/kZPEkFtxPQ')">Discord joinen</button>
+                    </div>
+                    <div class="p-2 w-full text-center">
+                        <button class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg" onclick="parent.open('mailto:contact@stormki.net')">contact@stormki.net</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact -->
+
 
     <!-- Start Footer -->
     <footer class="text-gray-400 bg-gray-900 body-font">
+        <button onclick='window.goUp({top: 0, behavior: "smooth"});' id="top">Top</button>
         <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
             <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
                 <img src="img/Stormki_Logo.ico" alt="Stormki" width="40">
@@ -300,7 +370,7 @@
                     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
-                    }, 100, function() {
+                    }, 800, function() {
 
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         window.location.hash = hash;
@@ -311,6 +381,28 @@
     </script>
     <!-- End Smooth Scrolling Script -->
 
+    <script>
+        const button = document.getElementById("top");
+
+        window.onscroll = function() {
+            showButton()
+        };
+
+        function showButton() {
+            if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        }
+
+        function goUp() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 
 </html>
